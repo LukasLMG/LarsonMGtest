@@ -153,14 +153,17 @@
 	<button id="toggle-sound" class="fixed bottom-6 left-6 z-50 bg-white text-black px-4 py-2 rounded-full shadow-lg">
   🔇 Sound Off
 </button>
-<iframe 
-  id="vimeo-video"
-  src="https://player.vimeo.com/video/1082358614?background=1&autoplay=1&loop=1&byline=0&title=0"
-  frameborder="0"
-  allow="autoplay; fullscreen"
-  allowfullscreen
-  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0"
-</iframe>
+<video
+	   id="hero-video"
+  autoplay 
+  muted 
+  loop 
+  playsinline 
+  preload="auto" 
+  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0">
+  <source src="Websitepromo Draft 7 4K With Animation_compressed_2.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 
 
@@ -230,13 +233,17 @@
     <!-- About Section -->
 <section id="about" class="relative h-screen overflow-hidden snap-start">
   <!-- Background Video -->
-  <iframe
-  src="https://player.vimeo.com/video/1083027512?autoplay=1&muted=1&loop=1&background=1"
-  frameborder="0"
-  allow="autoplay; fullscreen; picture-in-picture"
-  allowfullscreen
-  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0"
-></iframe>
+  <video 
+  autoplay 
+  muted 
+  loop 
+  playsinline 
+  preload="auto"
+  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0">
+  <source src="Slow Motion Lake_compressed - Trim.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 
 
   <!-- Foreground Content -->
@@ -322,13 +329,16 @@
     <!-- Services Section -->
 <section id="services" class="relative h-screen overflow-hidden snap-start">
   <!-- Background video -->
-  <iframe
-  src="https://player.vimeo.com/video/1083027589?autoplay=1&muted=1&loop=1&background=1"
-  frameborder="0"
-  allow="autoplay; fullscreen; picture-in-picture"
-  allowfullscreen
-  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0"
-></iframe>
+  <video 
+  autoplay 
+  muted 
+  loop 
+  playsinline 
+  preload="auto"
+  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0">
+  <source src="Aerial Video Black Filter_compressed - Trim.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 
   <!-- Content wrapper (on top of video) -->
@@ -486,13 +496,16 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="relative pt-0 pb-0 overflow-hidden">
   <!-- Background video -->
- <iframe
-  src="https://player.vimeo.com/video/1083027555?autoplay=1&muted=1&loop=1&background=1"
-  frameborder="0"
-  allow="autoplay; fullscreen; picture-in-picture"
-  allowfullscreen
-  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0"
-></iframe>
+ <video 
+  autoplay 
+  muted 
+  loop 
+  playsinline 
+  preload="auto"
+  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[5000px] h-full object-cover z-0">
+  <source src="Aurora Borealis Edited2_compressed.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 
 
@@ -928,7 +941,7 @@
         });
     </script>
 	<script>
-  const video = document.getElementById('bg-video');
+  const video = document.getElementById('hero-video');
   const soundBtn = document.getElementById('toggle-sound');
 
   soundBtn.addEventListener('click', () => {
@@ -966,32 +979,6 @@
   });
 </script>
 <script src="https://player.vimeo.com/api/player.js"></script>
-
-<script>
-  // Set up the Vimeo player
-  const iframe = document.getElementById('vimeo-video');
-  const player = new Vimeo.Player(iframe);
-
-  const button = document.getElementById('toggle-sound');
-  let isMuted = true;
-
-  // Set the initial mute state of the video
-  player.setVolume(0);  // Initially muted
-
-  // Event listener for the sound toggle button
-  button.addEventListener('click', () => {
-    if (isMuted) {
-      player.setVolume(1); // Unmute video
-      button.textContent = "🔊 Sound On"; // Update button text
-    } else {
-      player.setVolume(0); // Mute video
-      button.textContent = "🔇 Sound Off"; // Update button text
-    }
-    isMuted = !isMuted;
-  });
-</script>
-
-
 
 </body>
 </html>
